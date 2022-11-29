@@ -13,5 +13,8 @@
     4. Number of loop itereations need to less. Otherwise it use more gas if with iterations
     
     5. Require , revert , assert error message need to be set with less characters.
+    
+    6. Custom errors are more gas efficient than using require with a string explanation. 
+        So ideally you'd always use this over require.
 
 
