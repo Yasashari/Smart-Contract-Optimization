@@ -9,5 +9,9 @@
 
     3. If there is a constant variable on the program 
     uint public constant  x = 10 < uint public x = 10 
+    
+    4. Number of loop itereations need to less. Otherwise it use more gas if with iterations
+    
+    5. Require , revert , assert error message need to be set with less characters.
 
 
