@@ -17,5 +17,7 @@
     6. Custom errors are more gas efficient than using require with a string explanation. 
         So ideally you'd always use this over require.
     7. Compared to regular state variables, the gas costs of constant and immutable variables are much lower
+    
+    8. constant values can sometimes be cheaper than immutable values.
 
 
