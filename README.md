@@ -1,6 +1,6 @@
 # Smart-Contract-Gas-Optimization
 
-## Here comment les gas consuption as given below.
+## Here comment less gas consuption as given below.
 
     1. ++x <  x++ or  x=x+1
 
