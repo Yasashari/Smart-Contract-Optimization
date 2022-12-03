@@ -31,4 +31,6 @@
     13. Function name optimization :
     
         https://medium.com/joyso/solidity-how-does-function-name-affect-gas-consumption-in-smart-contract-47d270d8ac92
+    
+    14. SPLITTING REQUIRE() STATEMENTS THAT USE && SAVES GAS
 
