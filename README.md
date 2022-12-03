@@ -19,5 +19,7 @@
     7. Compared to regular state variables, the gas costs of constant and immutable variables are much lower
     
     8. constant values can sometimes be cheaper than immutable values.
+    
+    9. Using calldata instead of memory for read-only arguments in external functions saves gas
 
 
