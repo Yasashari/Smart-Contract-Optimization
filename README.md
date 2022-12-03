@@ -21,5 +21,14 @@
     8. constant values can sometimes be cheaper than immutable values.
     
     9. Using calldata instead of memory for read-only arguments in external functions saves gas
+    
     10. Nice atricle about unchecked block https://ethereum.stackexchange.com/questions/113221/what-is-the-purpose-of-unchecked-in-solidity
+    
+    11.  ADD UNCHECKED {} FOR SUBTRACTIONS WHERE THE OPERANDS CANNOT UNDERFLOW BECAUSE OF A PREVIOUS REQUIRE() OR IF-STATEMENT.
+    
+    12. ++I/I++ SHOULD BE UNCHECKED{++I}/UNCHECKED{I++} WHEN IT IS NOT POSSIBLE FOR THEM TO OVERFLOW, AS IS THE CASE WHEN USED IN FOR- AND WHILE-LOOPS.
+    
+    13. Function name optimization :
+    
+        https://medium.com/joyso/solidity-how-does-function-name-affect-gas-consumption-in-smart-contract-47d270d8ac92
 
