@@ -1,6 +1,6 @@
 # Smart-Contract-Gas-Optimization
 
-## Here comment less gas consuption as given below.
+##  Less gas consuption as given below.
 
     1. ++x <  x++ or  x=x+1
 
@@ -36,4 +36,7 @@
     
     15. DON’T COMPARE BOOLEAN EXPRESSIONS TO BOOLEAN LITERALS
         if (<x> == true) => if (<x>), if (<x> == false) => if (!<x>)
+        
+    16. USE CUSTOM ERRORS RATHER THAN REVERT()/REQUIRE() STRINGS TO SAVE GAS 
+        https://ethereum.stackexchange.com/questions/101782/requirecondition-message-vs-revert-with-a-custom-error-which-is-better-a
 
