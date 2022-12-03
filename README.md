@@ -21,5 +21,5 @@
     8. constant values can sometimes be cheaper than immutable values.
     
     9. Using calldata instead of memory for read-only arguments in external functions saves gas
-
+    10. Nice atricle about unchecked block https://ethereum.stackexchange.com/questions/113221/what-is-the-purpose-of-unchecked-in-solidity
 
