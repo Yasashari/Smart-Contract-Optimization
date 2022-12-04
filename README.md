@@ -39,4 +39,7 @@
         
     16. USE CUSTOM ERRORS RATHER THAN REVERT()/REQUIRE() STRINGS TO SAVE GAS 
         https://ethereum.stackexchange.com/questions/101782/requirecondition-message-vs-revert-with-a-custom-error-which-is-better-a
+        
+    17. Don't initialize variables with default value .
+        bool dataValidity = false;     for (uint256 i = 0; i < _assets.length; i++) {}
 
