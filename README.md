@@ -42,4 +42,20 @@
         
     17. Don't initialize variables with default value .
         bool dataValidity = false;     for (uint256 i = 0; i < _assets.length; i++) {}
+        
+    
+    18. Using private rather than public for constants, saves gas 
+        bytes32 public constant UPDATER_ROLE = keccak256("UPDATER_ROLE");
+        
+    
+    19.  Use != 0 instead of > 0 for unsigned integer comparison 
+         require(_twap > 0, "NFTOracle: price should be more than 0");
+         if (priceInfo.updatedAt > 0) {}
+         
+   20. Loop optimization 
+       if your looping array get array length into cache.
+       use UNCHECKED{++I} . 
+       Read more..https://hackmd.io/@totomanov/gas-optimization-loops
+         
+         
 
