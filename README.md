@@ -61,6 +61,12 @@
         during emission, so it's not necessarily best to index the maximum allowed per event (three fields). Each event should use three indexed fields if
         ther are three or more fields, and gas usage is not particularly of concern for the events in question. If there are fewer than three fields, all of
         the fields should be indexed.
+        
+    22. Using bools for storage incurs overhead
+        Use uint256(1) and uint256(2) for true/false to avoid a Gwarmaccess (100 gas), and to avoid Gsset (20000 gas) when changing from ‘false’ to ‘true’,
+        after having been ‘true’ in the past. 
+        https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f635312aa21f947cae5f8578638a85aa2519f5/contracts/security/ReentrancyGuard.sol#L23-L27
+        
          
          
 
