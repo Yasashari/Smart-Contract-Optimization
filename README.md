@@ -66,6 +66,15 @@
         Use uint256(1) and uint256(2) for true/false to avoid a Gwarmaccess (100 gas), and to avoid Gsset (20000 gas) when changing from ‘false’ to ‘true’,
         after having been ‘true’ in the past. 
         https://github.com/OpenZeppelin/openzeppelin-contracts/blob/58f635312aa21f947cae5f8578638a85aa2519f5/contracts/security/ReentrancyGuard.sol#L23-L27
+     
+    23. FUNCTIONS GUARANTEED TO REVERT WHEN CALLED BY NORMAL USERS CAN BE MARKED PAYABLE
+    
+        if a function modifier such as onlyOwner is used, the function will revert if a normal user tries to pay the function. Marking the function as payable
+        will lower the gas cost for legitimate callers because the compiler will not include checks for whether a payment was provided.
+        
+        function setOwner(address newOwner) public virtual onlyOwner {
+        function withdraw(address to, uint256[] calldata ids) external onlyOwner {
+        
         
          
          
