@@ -94,6 +94,8 @@
         Therefore, if the element is smaller than that, the EVM must use more operations in order to reduce the size of the element from 32 bytes to the
         desired size.
         
+    29. USING PRIVATE RATHER THAN PUBLIC FOR CONSTANTS, SAVES GAS
+        
         
          
          
