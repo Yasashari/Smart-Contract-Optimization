@@ -87,6 +87,8 @@
         Use a solidity version of at least 0.8.4 to get custom errors, which are cheaper at deployment than revert()/require() strings
         Use a solidity version of at least 0.8.10 to have external calls skip contract existence checks if the external call has a return value
         
+    27. USING STORAGE INSTEAD OF MEMORY FOR STRUCTS/ARRAYS SAVES GAS
+        
         
          
          
