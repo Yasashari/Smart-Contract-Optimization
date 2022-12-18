@@ -95,6 +95,14 @@
         desired size.
         
     29. USING PRIVATE RATHER THAN PUBLIC FOR CONSTANTS, SAVES GAS
+    
+    30. EMPTY BLOCKS SHOULD BE REMOVED OR EMIT SOMETHING 
+        eg : receive() external payable {}
+        
+    31. DON’T USE SAFEMATH ONCE THE SOLIDITY VERSION IS 0.8.0 OR GREATER
+        Version 0.8.0 introduces internal overflow checks, so using SafeMath is redundant and adds overhead
+        import { SafeMath } from  "@openzeppelin/contracts/utils/math/SafeMath.sol";
+        
         
         
          
