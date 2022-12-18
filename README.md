@@ -88,6 +88,11 @@
         Use a solidity version of at least 0.8.10 to have external calls skip contract existence checks if the external call has a return value
         
     27. USING STORAGE INSTEAD OF MEMORY FOR STRUCTS/ARRAYS SAVES GAS
+    
+    28. USAGE OF UINTS/INTS SMALLER THAN 32 BYTES (256 BITS) INCURS OVERHEAD
+        When using elements that are smaller than 32 bytes, your contract’s gas usage may be higher. This is because the EVM operates on 32 bytes at a time.
+        Therefore, if the element is smaller than that, the EVM must use more operations in order to reduce the size of the element from 32 bytes to the
+        desired size.
         
         
          
