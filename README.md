@@ -69,11 +69,23 @@
      
     23. FUNCTIONS GUARANTEED TO REVERT WHEN CALLED BY NORMAL USERS CAN BE MARKED PAYABLE
     
-        if a function modifier such as onlyOwner is used, the function will revert if a normal user tries to pay the function. Marking the function as payable
-        will lower the gas cost for legitimate callers because the compiler will not include checks for whether a payment was provided.
+        if a function modifier such as onlyOwner is used, the function will revert if a normal user tries to pay the function. Marking the function as
+        payable will lower the gas cost for legitimate callers because the compiler will not include checks for whether a payment was provided.
         
         function setOwner(address newOwner) public virtual onlyOwner {
         function withdraw(address to, uint256[] calldata ids) external onlyOwner {
+        
+    24. ADD REQUIRE() FOR ASSET ADDRESS CHECKS BEFORE DOING THE EXCHANGE 
+        address should be verified (0x0) in oder to prevent wasting gas before every transactions. 
+        
+    25. STATE VARIABLES SHOULD BE CACHED IN STACK VARIABLES RATHER THAN RE-READING THEM FROM STORAGE
+    
+    26. USE A MORE RECENT VERSION OF SOLIDITY
+        Use a solidity version of at least 0.8.0 to get overflow protection without SafeMath
+        Use a solidity version of at least 0.8.2 to get compiler automatic inlining
+        Use a solidity version of at least 0.8.3 to get better struct packing and cheaper multiple storage reads
+        Use a solidity version of at least 0.8.4 to get custom errors, which are cheaper at deployment than revert()/require() strings
+        Use a solidity version of at least 0.8.10 to have external calls skip contract existence checks if the external call has a return value
         
         
          
