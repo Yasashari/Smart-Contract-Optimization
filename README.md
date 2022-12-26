@@ -103,6 +103,21 @@
         Version 0.8.0 introduces internal overflow checks, so using SafeMath is redundant and adds overhead
         import { SafeMath } from  "@openzeppelin/contracts/utils/math/SafeMath.sol";
         
+   32. Use assembly to check for address(0)
+        if (nodeID == address(0)) {
+        enabled = (addr != address(0)) && getBool(keccak256(abi.encodePacked("multisig.item", index, ".enabled")));
+        
+    33. array[index] += amount is cheaper than array[index] = array[index] + amount (or related variants)
+        When updating a value in an array with arithmetic, using array[index] += amount is cheaper than array[index] = array[index] + amount. This is because
+        you avoid an additonal mload when the array is stored in memory, and an sload when the array is stored in storage. This can be applied for any
+        arithmetic operation including +=, -=,/=,*=,^=,&=, %=, <<=,>>=, and >>>=. This optimization can be particularly significant if the pattern occurs
+        during a loop.
+        
+        avaxBalances[contractName] = avaxBalances[contractName] + msg.value;
+
+        avaxBalances[contractName] = avaxBalances[contractName] - amount;
+        
+        
         
         
          
