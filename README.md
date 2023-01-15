@@ -134,7 +134,7 @@
         string public constant VERSION = "1";
         
  
- FOR MORE READ
+    FOR MORE READ
         https://github.com/code-423n4/2022-07-fractional-findings/issues/507
         
         
