@@ -103,7 +103,7 @@
         Version 0.8.0 introduces internal overflow checks, so using SafeMath is redundant and adds overhead
         import { SafeMath } from  "@openzeppelin/contracts/utils/math/SafeMath.sol";
         
-   32. Use assembly to check for address(0)
+    32. Use assembly to check for address(0)
         if (nodeID == address(0)) {
         enabled = (addr != address(0)) && getBool(keccak256(abi.encodePacked("multisig.item", index, ".enabled")));
         
