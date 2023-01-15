@@ -117,6 +117,26 @@
 
         avaxBalances[contractName] = avaxBalances[contractName] - amount;
         
+    34. Multiple address/ID mappings can be combined into a single mapping of an address/ID to a struct, where appropriate
+    
+    Saves a storage slot for the mapping. Depending on the circumstances and sizes of types, can avoid a Gsset (20000 gas) per mapping combined. Reads and subsequent
+    writes can also be cheaper when a function requires both values and they both fit in the same storage slot. Finally, if both fields are accessed in the same
+    function, can save ~42 gas per access due to not having to recalculate the key's keccak256 hash (Gkeccak256 - 30 gas) and that calculation's associated stack
+    operations.
+    https://github.com/code-423n4/2022-07-fractional-findings/issues/507
+    
+    35. require()/revert() strings longer than 32 bytes cost extra gas
+    
+        require(_data.length > 1, "wont generate root for single leaf");
+        
+    36. Using private rather than public for constants, saves gas
+        string public constant NAME = "FERC1155";
+        string public constant VERSION = "1";
+        
+ 
+ FOR MORE READ
+        https://github.com/code-423n4/2022-07-fractional-findings/issues/507
+        
         
         
         
